@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu/view-song"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit {{song?.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button color="primary" (click)="saveSong(song)" expand="block"
+    >Done</ion-button
+  >
+  <p>Band:</p>
+  <ion-item class="chords">
+    <ion-textarea [(ngModel)]="song.band"> </ion-textarea>
+  </ion-item>
+  <p>Song Title:</p>
+  <ion-item class="lyrics">
+    <ion-textarea [(ngModel)]="song.title"></ion-textarea>
+  </ion-item>
+  <p>Chords:</p>
+  <ion-item class="chords">
+    <ion-textarea [(ngModel)]="song.chords"> </ion-textarea>
+  </ion-item>
+  <p>Lyrics:</p>
+  <ion-item class="lyrics">
+    <ion-textarea [(ngModel)]="song.lyrics"></ion-textarea>
+  </ion-item>
+  <ion-button color="danger" (click)="deleteSong(song)" expand="block"
+    >Delete Song</ion-button
+  >
+</ion-content>

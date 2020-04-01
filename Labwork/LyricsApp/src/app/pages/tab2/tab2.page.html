@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add Song
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>
+      Band Name
+    </ion-label>
+    <ion-input [(ngModel)]="song.band" placeholder="band name..."></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Song Title
+    </ion-label>
+    <ion-input [(ngModel)]="song.title" placeholder="song name..."></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Chords
+    </ion-label>
+    <ion-input [(ngModel)]="song.chords" placeholder="chords..."></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Lyrics
+    </ion-label>
+    <ion-input [(ngModel)]="song.lyrics" placeholder="lyrics..."></ion-input>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="primary" expand="block" (click)="addSong(song)"
+      >Add Song</ion-button
+    >
+  </ion-toolbar>
+</ion-footer>

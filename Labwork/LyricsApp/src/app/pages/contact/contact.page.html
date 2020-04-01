@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contact</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="welcome-card">
+    <img class="profile-image" src="/assets/Tuukka.jpg" alt="" />
+    <ion-card-header>
+      <ion-card-subtitle class="center-text"
+        >© Tuukka Tihekari</ion-card-subtitle
+      >
+      <ion-card-title>Like what you see?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        I'm a web developer student at Laurea, and I'm awlays looking for
+        interesting projects!
+      </p>
+      <br />
+      <p>
+        Contact me and let's collaborate!
+        <span>😊</span>
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="tertiary" expand="block" (click)="sendContact()"
+      >Contact me!<ion-icon class="icon" name="paper-plane-outline"></ion-icon
+    ></ion-button>
+  </ion-toolbar>
+</ion-footer>
