@@ -17,8 +17,6 @@
         (ionChange)="onContextChange($event)"
         [(ngModel)]="song"
         multiple="false"
-        cancelText="cancel"
-        okText="Show songs from selected"
       >
         <ion-select-option *ngFor="let item of bands | async"
           >{{item.band}}</ion-select-option
