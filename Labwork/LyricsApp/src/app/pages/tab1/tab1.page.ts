@@ -31,7 +31,7 @@ export class Tab1Page {
     this.bands = this.songsList$;
   }
 
-  ionViewWillEnter() {
+  /* ionViewWillEnter() {
     this.songsList$ = this.songsService
       .getSongList()
       .snapshotChanges()
@@ -44,7 +44,7 @@ export class Tab1Page {
         })
       );
     this.bands = this.songsList$;
-  }
+  } */
 
   onContextChange(ctxt): void {
     if (ctxt.detail.value) {

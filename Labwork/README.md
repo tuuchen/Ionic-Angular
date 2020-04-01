@@ -2,10 +2,6 @@
 
 In this folder you can find my labwork tasks and some of my own prototyping.
 
-- Wireframe
-
-  - Mobile App wireframe built with ionic framework Creator -tool
-
 - EnvTest
 
   - Environment variable testing with Angular for my own interest
@@ -17,3 +13,7 @@ In this folder you can find my labwork tasks and some of my own prototyping.
 - Lyrics App
 
   - Mobile App with firebase db
+
+- Wireframe
+
+  - Mobile App wireframe built with ionic framework Creator -tool
