@@ -2,7 +2,7 @@
 
 This Mobile App is based on Wireframe found [here.](https://github.com/tuuchen/ionic-angular/tree/master/Labwork/Wireframe)
 
-Live demo of this project can be found [here.](https://ionic-angular-demo.herokuapp.com/)
+Live demo of this project can be found [here.](https://ionic-weatherdemo.herokuapp.com/)
 
 ![WeatherApp](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/WeatherApp/src/assets/App.png)
 
