@@ -1,0 +1,82 @@
+<ion-header id="header">
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">
+      Weather
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="end">
+        <ion-icon name="search"></ion-icon
+      ></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main">
+  <div class="weather" *ngIf="weather">
+    <ion-card class="card">
+      <ion-row>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title class="name">{{weather.name}}</ion-card-title>
+            <br />
+            <ion-card-title class="weather"><b>{{weather.main.temp}}°C</b></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p><b>Sunrise: </b> {{weather.sys.sunrise * 1000 | date: "shortTime"}}</p>
+            <p><b>Sunset: </b> {{weather.sys.sunset * 1000 | date: "shortTime"}}</p>
+            <p><b>Feels like: </b> {{weather.main.feels_like}}°C</p>
+            <p><b>Min temp: </b> {{weather.main.temp_min}}°C</p>
+            <p><b>Max temp: </b> {{weather.main.temp_max}}°C</p>
+          </ion-card-content>
+        </ion-col>
+        <ion-col style="text-align: center;">
+          <img
+            class="img"
+            width="100px"
+            [src]="'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png' "
+          /><br /><strong>{{weather.weather[0].description}}</strong>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-subtitle>Weather Radar</ion-card-subtitle>
+    </ion-card-content>
+    <div class="map">
+      <agm-map
+        (mapReady)="doSomethingWithTheMapInstance($event)"
+        [latitude]="initMap['lat']"
+        [longitude]="initMap['lng']"
+        [fullscreenControl]="false"
+        [zoomControl]="false"
+        [zoom]="initMap['zoom']"
+        [disableDefaultUI]="true"
+        [zoomControl]="true"
+        [mapTypeControl]="false"
+        [mapDraggable]="false"
+      >
+        <agm-marker
+          [latitude]="initMap['lat']"
+          [longitude]="initMap['lng']"
+          [markerDraggable]="true"
+        >
+        </agm-marker>
+      </agm-map>
+    </div>
+    <ion-card-content>
+      <div class="legend-container">
+        <div class="legend-title">Rain</div>
+        <div class="legend-body">
+          <div class="legend-min-scale">0 mm</div>
+          <div class="legend-avg-scale">100 mm</div>
+          <div class="legend-max-scale">200 mm</div>
+          <div [ngClass]="['legend-scale','weather-percepitation']"></div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

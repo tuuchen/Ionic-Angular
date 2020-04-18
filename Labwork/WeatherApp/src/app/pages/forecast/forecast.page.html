@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title size="small" *ngIf="forecast">
+      {{forecast.city.name}} forecast
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="end">
+        <ion-icon name="search"></ion-icon
+      ></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main">
+  <div *ngIf="forecast">
+    <div class="weather" *ngFor="let item of forecast.list">
+      <ion-card class="card">
+        <ion-row>
+          <ion-col>
+            <ion-card-header>
+              <ion-card-subtitle
+                >{{item.dt_txt | date: "EEEE, MMMM d, h:mm a"
+                }}</ion-card-subtitle
+              >
+              <ion-card-title style="margin-top: 0.5rem;"
+                >{{item.main.temp}}°C</ion-card-title
+              >
+            </ion-card-header>
+          </ion-col>
+          <ion-col style="text-align: center;">
+            <img
+              class="img"
+              [src]="'http://openweathermap.org/img/w/' + item.weather[0].icon + '.png' "
+            /><br />
+            <strong>{{item.weather[0].description}}</strong>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
