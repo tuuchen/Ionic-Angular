@@ -4,6 +4,10 @@ This Mobile App is based on Wireframe found [here.](https://github.com/tuuchen/i
 
 Live demo of this project can be found [here.](https://ionic-angular-demo.herokuapp.com/)
 
+![WeatherApp](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/WeatherApp/src/assets/app.PNG)
+
+https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/Prototype.PNG
+
 ## Project setup
 
 ### Install Ionic CLI
