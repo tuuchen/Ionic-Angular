@@ -10,3 +10,4 @@ These are my Ionic-Angular mobile app prototypes for Laurea course R0334-3003 In
 | 02     |       [EnvTest](Labwork/EnvTest)       | Environment variables with Angular |
 | 03     | [FirebaseLogin](Labwork/FirebaseLogin) |   Mobile App login with Firebase   | [Link](https://ionic-angular-demo.herokuapp.com/)   |
 | 04     |     [LyricsApp](Labwork/LyricsApp)     |       CRUD app with Firebase       | [Link](https://labwork7.herokuapp.com/)             |
+| 05     |     [WeatherApp](Labwork/WeatherApp)     |       Mobile Weather App with weather radar       | [Link](https://ionic-weatherdemo.herokuapp.com/)             |

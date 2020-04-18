@@ -1,3 +1,5 @@
+/* Tuukka Tihekari & Essi Marjoniemi 19/04/2020 */ 
+
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';

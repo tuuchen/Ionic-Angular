@@ -19,9 +19,6 @@ export class WeatherPage implements OnInit {
     zoom: 6,
   };
 
-  // 5d99c597690e1609e621434a87166825
-  // 9f4d67fc449f30b9c2a33a138be6b54e
-
   public weatherMapSource = '';
   public weatherMapSourceApiKey = '9f4d67fc449f30b9c2a33a138be6b54e';
   public mapInstance: any;

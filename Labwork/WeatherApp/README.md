@@ -39,3 +39,5 @@ npm run lint
 ### Customize configuration
 
 See [Configuration Reference](https://ionicframework.com/docs/cli/configuration).
+
+_Design and code: Tuukka Tihekari & Essi Marjoniemi_

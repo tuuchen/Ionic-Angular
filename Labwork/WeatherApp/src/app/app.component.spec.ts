@@ -1,3 +1,5 @@
+/* Tuukka Tihekari & Essi Marjoniemi 19/04/2020 */ 
+
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 
