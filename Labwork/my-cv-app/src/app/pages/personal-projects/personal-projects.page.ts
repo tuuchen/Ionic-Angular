@@ -38,7 +38,7 @@ export class PersonalProjectsPage implements OnInit {
         'My first ever Ionic/Angular  CRUD  mobile app with firebase integration. \n\n This Mobile app was made as an independent project part of a Laurea Mobile development course.',
       img: 'assets/ionic.jpg',
       url:
-        'https://github.com/tuuchen/ionic-angular/tree/master/Labwork/LyricsApp',
+        'https://github.com/tuuchen/ionic-angular/tree/master/Labwork/lyrics-app',
     },
     {
       title: 'Node.js',

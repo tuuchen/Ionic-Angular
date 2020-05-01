@@ -21,7 +21,7 @@ export class TeamProjectsPage implements OnInit {
         '\n\n We made the wireframe together with my friend in Mobile App Development Course. We later used this wireframe to build an working Weather App.',
       img: 'assets/ionic.jpg',
       url:
-        'https://github.com/tuuchen/ionic-angular/tree/master/Labwork/Wireframe',
+        'https://github.com/tuuchen/ionic-angular/tree/master/Labwork/weather-app-wireframe',
     },
     {
       title: 'Ionic',
@@ -32,7 +32,7 @@ export class TeamProjectsPage implements OnInit {
         '\n\n Combined with Ionic, we made this Weather App project together with my friend in Mobile App Development Course.',
       img: 'assets/ionic.jpg',
       url:
-        'https://github.com/tuuchen/ionic-angular/tree/master/Labwork/WeatherApp',
+        'https://github.com/tuuchen/ionic-angular/tree/master/Labwork/weather-app',
     },
     {
       title: 'RCF Festival',
