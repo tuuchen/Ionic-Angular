@@ -1,8 +1,6 @@
-# Labwork 6 - Mobile App design and wireframing
+# My CV APP Wireframe
 
-In this project I learned how to use [Creator](https://ionicframework.com/creator) -tool to create basic ionic framework weather app wireframe.
-
-The weather app wireframe can be found [here.](https://creator.ionic.io/share/873636697576)
+The weather app wireframe can be found [here.](https://creator.ionic.io/share/cb30bb0bfac2)
 
 ## Structure of the wireframe
 

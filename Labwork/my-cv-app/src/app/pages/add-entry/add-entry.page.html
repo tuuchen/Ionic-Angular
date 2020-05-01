@@ -1,0 +1,31 @@
+<!-- Tuukka Tihekari 1800576 01.05.2020 -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      New Entry
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu/guestbook"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>From {{guestbook.author}}</ion-card-subtitle>
+      <ion-card-title>Message title:</ion-card-title>
+      <ion-input [(ngModel)]="guestbook.title" placeholder="Write something..."></ion-input>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-subtitle>Your message:</ion-card-subtitle>
+      <ion-textarea rows="8" cols="20" [(ngModel)]="guestbook.message" placeholder="Write something..."></ion-textarea>
+      <ion-card-subtitle>✏️ {{guestbook.date}}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="primary" expand="block" (click)="addGuestbook(guestbook)">Add Entry</ion-button>
+  </ion-toolbar>
+</ion-footer>
