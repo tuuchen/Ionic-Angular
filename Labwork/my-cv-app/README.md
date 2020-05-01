@@ -1,6 +1,6 @@
 # My CV App
 
-Live demo of this project can be found [here.]("")
+Live demo of this project can be found [here.](https://ionic-cv-app.herokuapp.com/)
 
 ## Project setup
 

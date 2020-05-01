@@ -1,4 +1,4 @@
-# My CV APP Wireframe
+# My CV App Wireframe
 
 The weather app wireframe can be found [here.](https://creator.ionic.io/share/cb30bb0bfac2)
 
