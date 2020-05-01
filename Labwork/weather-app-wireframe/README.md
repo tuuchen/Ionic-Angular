@@ -6,49 +6,23 @@ The weather app wireframe can be found [here.](https://creator.ionic.io/share/87
 
 ## Structure of the wireframe
 
-### 1\. Login
+### 1\. Weather page
 
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/1.PNG)
+![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/weather-app-wireframe/src/Prototype.PNG)
 
-### 2\. Sign up
+### 2\. Forecast page
 
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/2.PNG)
+![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/weather-app-wireframe/src/Forecast.PNG)
 
-### 3\. About
+### 3\. Weather radar page
 
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/3.PNG)
+![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/weather-app-wireframe/src/Radar.PNG)
 
-### 4\. CV
+### 4\. Weather warning page
 
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/4.PNG)
+![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/weather-app-wireframe/src/Warnings.PNG)
 
-### 5\. Guestbook
+### 5\. Search menu
 
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/5.PNG)
-
-### 6\. Add new entry
-
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/6.PNG)
-
-### 7\. Menu page
-
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/7.PNG)
-
-
-### 8\. Technical Skills
-
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/8.PNG)
-
-### 9\. Soft Skills
-
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/9.PNG)
-
-
-### 10\. Personal projects
-
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/10.PNG)
-
-### 11\. Team projects
-
-![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/Wireframe/src/11.PNG)
+![Weather](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/weather-app-wireframe/src/Menu.PNG)
 
