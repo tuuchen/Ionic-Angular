@@ -13,22 +13,24 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content class="text-center">
+<ion-content>
   <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <!-- Loop skills here -->
-            <ion-list *ngFor="let skill of softSkills">
-              <ion-item>
-                <h3>✔️</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <!-- Loop skills here -->
+          <ion-list *ngFor="let skill of softSkills">
+            <ion-item>
+              <h3>✔️</h3>
+              <ion-label style="white-space: pre-line !important;" class="text-center">
                 <ion-card-subtitle class="ml-3">
                   {{skill.description}}
                 </ion-card-subtitle>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 </ion-content>

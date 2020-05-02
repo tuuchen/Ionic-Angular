@@ -25,7 +25,9 @@
             <ion-list>
               <!-- Loop items -->
               <ion-item *ngFor="let score of frontEnd">
-                <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
+                <ion-label class="d-flex justify-content-center">
+                  <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
+                </ion-label>
               </ion-item>
             </ion-list>
           </ion-col>
@@ -33,11 +35,13 @@
             <ion-list>
               <!-- Loop Star ratings -->
               <ion-item *ngFor="let score of frontEnd">
-                <ngb-rating [(rate)]="score.value" readonly="true" max="5">
-                  <ng-template let-fill="fill" let-index="index">
-                    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
-                  </ng-template>
-                </ngb-rating>
+                <ion-label style="max-height: 1.5rem;" class="d-flex justify-content-center">
+                  <ngb-rating [(rate)]="score.value" readonly="true" max="5">
+                    <ng-template let-fill="fill" let-index="index">
+                      <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
+                    </ng-template>
+                  </ngb-rating>
+                </ion-label>
               </ion-item>
             </ion-list>
           </ion-col>
@@ -56,7 +60,9 @@
             <ion-list>
               <!-- Loop items -->
               <ion-item *ngFor="let score of backEnd">
-                <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
+                <ion-label class="d-flex justify-content-center">
+                  <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
+                </ion-label>
               </ion-item>
             </ion-list>
           </ion-col>
@@ -64,11 +70,13 @@
             <ion-list>
               <!-- Loop Star ratings -->
               <ion-item *ngFor="let score of backEnd">
-                <ngb-rating [(rate)]="score.value" readonly="true" max="5">
-                  <ng-template let-fill="fill" let-index="index">
-                    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
-                  </ng-template>
-                </ngb-rating>
+                <ion-label style="max-height: 1.5rem;" class="d-flex justify-content-center">
+                  <ngb-rating [(rate)]="score.value" readonly="true" max="5">
+                    <ng-template let-fill="fill" let-index="index">
+                      <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
+                    </ng-template>
+                  </ngb-rating>
+                </ion-label>
               </ion-item>
             </ion-list>
           </ion-col>
