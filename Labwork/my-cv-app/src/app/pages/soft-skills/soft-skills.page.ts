@@ -25,8 +25,6 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class SoftSkillsPage implements OnInit {
-
-
   // soft skills
   softSkills = [
     {
@@ -39,7 +37,7 @@ export class SoftSkillsPage implements OnInit {
       description: 'I have great communication skills',
     },
     {
-      description: "I'm willing to admit and learn from my mistakes",
+      description: "I'm willing to admit my mistakes and learn from them",
     },
     {
       description: "I'm great at solving problems",
