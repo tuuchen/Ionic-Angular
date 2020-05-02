@@ -14,74 +14,76 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card>
-    <ion-card-header class="text-center">
-      <ion-card-title>Front-End 💻</ion-card-title>
-    </ion-card-header>
-    <ion-item>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-list>
-              <!-- Loop items -->
-              <ion-item *ngFor="let score of frontEnd">
-                <ion-label class="d-flex justify-content-center">
-                  <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
-                </ion-label>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-          <ion-col>
-            <ion-list>
-              <!-- Loop Star ratings -->
-              <ion-item *ngFor="let score of frontEnd">
-                <ion-label style="max-height: 1.5rem;" class="d-flex justify-content-center">
-                  <ngb-rating [(rate)]="score.value" readonly="true" max="5">
-                    <ng-template let-fill="fill" let-index="index">
-                      <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
-                    </ng-template>
-                  </ngb-rating>
-                </ion-label>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-  </ion-card>
-  <ion-card>
-    <ion-card-header class="text-center">
-      <ion-card-title>Back-End ⚙</ion-card-title>
-    </ion-card-header>
-    <ion-item>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-list>
-              <!-- Loop items -->
-              <ion-item *ngFor="let score of backEnd">
-                <ion-label class="d-flex justify-content-center">
-                  <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
-                </ion-label>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-          <ion-col>
-            <ion-list>
-              <!-- Loop Star ratings -->
-              <ion-item *ngFor="let score of backEnd">
-                <ion-label style="max-height: 1.5rem;" class="d-flex justify-content-center">
-                  <ngb-rating [(rate)]="score.value" readonly="true" max="5">
-                    <ng-template let-fill="fill" let-index="index">
-                      <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
-                    </ng-template>
-                  </ngb-rating>
-                </ion-label>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-  </ion-card>
+  <div style="margin: 0 auto; max-width: 40rem;">
+    <ion-card>
+      <ion-card-header class="text-center">
+        <ion-card-title>Front-End 💻</ion-card-title>
+      </ion-card-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+                <!-- Loop items -->
+                <ion-item *ngFor="let score of frontEnd">
+                  <ion-label class="d-flex justify-content-center">
+                    <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+            <ion-col>
+              <ion-list>
+                <!-- Loop Star ratings -->
+                <ion-item *ngFor="let score of frontEnd">
+                  <ion-label style="max-height: 1.5rem;" class="d-flex justify-content-center">
+                    <ngb-rating [(rate)]="score.value" readonly="true" max="5">
+                      <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
+                      </ng-template>
+                    </ngb-rating>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-card-header class="text-center">
+        <ion-card-title>Back-End ⚙</ion-card-title>
+      </ion-card-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+                <!-- Loop items -->
+                <ion-item *ngFor="let score of backEnd">
+                  <ion-label class="d-flex justify-content-center">
+                    <ion-card-subtitle><strong>{{score.name}}</strong></ion-card-subtitle>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+            <ion-col>
+              <ion-list>
+                <!-- Loop Star ratings -->
+                <ion-item *ngFor="let score of backEnd">
+                  <ion-label style="max-height: 1.5rem;" class="d-flex justify-content-center">
+                    <ngb-rating [(rate)]="score.value" readonly="true" max="5">
+                      <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 1">&#9733;</span>
+                      </ng-template>
+                    </ngb-rating>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-card>
+  </div>
 </ion-content>

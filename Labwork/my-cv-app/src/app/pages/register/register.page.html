@@ -9,28 +9,24 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-<br>
-<ion-card>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
-  </form>
-  </ion-card>
+  <div style="margin: 0 auto; max-width: 40rem;">
+    <br>
+    <ion-card>
+      <form>
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" #email required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+      </form>
+    </ion-card>
+  </div>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-button
-      color="dark"
-      type="submit"
-      (click)="signUp(email, password)"
-      expand="block"
-      >Ok</ion-button
-    >
+    <ion-button color="dark" type="submit" (click)="signUp(email, password)" expand="block">Ok</ion-button>
   </ion-toolbar>
 </ion-footer>

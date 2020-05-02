@@ -11,18 +11,21 @@
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>From {{guestbook.author}}</ion-card-subtitle>
-      <ion-card-title>Message title:</ion-card-title>
-      <ion-input [(ngModel)]="guestbook.title" placeholder="Write something..."></ion-input>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-card-subtitle>Your message:</ion-card-subtitle>
-      <ion-textarea rows="8" cols="20" [(ngModel)]="guestbook.message" placeholder="Write something..."></ion-textarea>
-      <ion-card-subtitle>✏️ {{guestbook.date}}</ion-card-subtitle>
-    </ion-card-content>
-  </ion-card>
+  <div style="margin: 0 auto; max-width: 40rem">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>From {{guestbook.author}}</ion-card-subtitle>
+        <ion-card-title>Message title:</ion-card-title>
+        <ion-input [(ngModel)]="guestbook.title" placeholder="Write something..."></ion-input>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-title>Your message:</ion-card-title>
+        <ion-textarea rows="8" cols="20" [(ngModel)]="guestbook.message" placeholder="Write something...">
+        </ion-textarea>
+        <ion-card-subtitle>✏️ {{guestbook.date}}</ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
 <ion-footer>
   <ion-toolbar>

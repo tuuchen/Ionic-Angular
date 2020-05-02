@@ -14,110 +14,112 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Personal information</ion-card-title>
-    </ion-card-header>
-    <ion-item>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="5">
-            <ion-card-subtitle>
-              <div>Name</div>
-              <div>Date of Birth</div>
-              <div>Hometown</div>
-            </ion-card-subtitle>
-          </ion-col>
-          <ion-col size="5">
-            <ion-card-subtitle>
-              <div>Tuukka Tihekari</div>
-              <div>24.09.1989</div>
-              <div>Hyvinkää</div>
-            </ion-card-subtitle>
-          </ion-col>
-          <ion-col>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-    </ion-card>
+  <div style="margin: 0 auto; max-width: 40rem">
     <ion-card>
-    <ion-card-header>
-      <ion-card-title>Employers</ion-card-title>
-    </ion-card-header>
-    <div *ngFor="let job of employers">
-      <ion-card-content>
-        <ion-card-header>
-          <ion-avatar>
-            <img src={{job.img}} />
-          </ion-avatar>
-        </ion-card-header>
-      </ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Personal information</ion-card-title>
+      </ion-card-header>
       <ion-item>
         <ion-grid>
           <ion-row>
             <ion-col size="5">
               <ion-card-subtitle>
-                <div><strong>{{job.description}}</strong></div>
+                <div>Name</div>
+                <div>Date of Birth</div>
+                <div>Hometown</div>
               </ion-card-subtitle>
             </ion-col>
-            <ion-col>
-              <ion-card-subtitle>
-                <div><strong>{{job.location}}</strong></div>
-              </ion-card-subtitle>
-            </ion-col>
-            <ion-col>
-              <ion-card-subtitle>
-                <div>{{job.date}}</div>
-              </ion-card-subtitle>
-            </ion-col>
-          </ion-row>
-          <br>
-          <ion-row>
-            <ion-card-subtitle>{{job.role}}
-            </ion-card-subtitle>
-          </ion-row>
-          <br>
-        </ion-grid>
-      </ion-item>
-    </div>
-    </ion-card>
-    <ion-card>
-    <ion-card-header>
-      <ion-card-title>Education</ion-card-title>
-    </ion-card-header>
-    <div *ngFor="let education of educations">
-      <ion-card-content>
-        <ion-card-header>
-          <ion-avatar>
-            <img src={{education.img}} />
-          </ion-avatar>
-        </ion-card-header>
-      </ion-card-content>
-      <ion-item>
-        <ion-grid>
-          <ion-row>
             <ion-col size="5">
               <ion-card-subtitle>
-                <div><strong>{{education.description}}</strong></div>
+                <div>Tuukka Tihekari</div>
+                <div>24.09.1989</div>
+                <div>Hyvinkää</div>
               </ion-card-subtitle>
             </ion-col>
             <ion-col>
             </ion-col>
-            <ion-col>
-              <ion-card-subtitle>
-                <div>{{education.date}}</div>
-              </ion-card-subtitle>
-            </ion-col>
-          </ion-row>
-          <br>
-          <ion-row>
-            <ion-card-subtitle>{{education.role}}
-            </ion-card-subtitle>
           </ion-row>
         </ion-grid>
       </ion-item>
-    </div>
     </ion-card>
-  <br>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Employers</ion-card-title>
+      </ion-card-header>
+      <div *ngFor="let job of employers">
+        <ion-card-content>
+          <ion-card-header>
+            <ion-avatar>
+              <img src={{job.img}} />
+            </ion-avatar>
+          </ion-card-header>
+        </ion-card-content>
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="5">
+                <ion-card-subtitle>
+                  <div><strong>{{job.description}}</strong></div>
+                </ion-card-subtitle>
+              </ion-col>
+              <ion-col>
+                <ion-card-subtitle>
+                  <div><strong>{{job.location}}</strong></div>
+                </ion-card-subtitle>
+              </ion-col>
+              <ion-col>
+                <ion-card-subtitle>
+                  <div>{{job.date}}</div>
+                </ion-card-subtitle>
+              </ion-col>
+            </ion-row>
+            <br>
+            <ion-row>
+              <ion-card-subtitle>{{job.role}}
+              </ion-card-subtitle>
+            </ion-row>
+            <br>
+          </ion-grid>
+        </ion-item>
+      </div>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Education</ion-card-title>
+      </ion-card-header>
+      <div *ngFor="let education of educations">
+        <ion-card-content>
+          <ion-card-header>
+            <ion-avatar>
+              <img src={{education.img}} />
+            </ion-avatar>
+          </ion-card-header>
+        </ion-card-content>
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="5">
+                <ion-card-subtitle>
+                  <div><strong>{{education.description}}</strong></div>
+                </ion-card-subtitle>
+              </ion-col>
+              <ion-col>
+              </ion-col>
+              <ion-col>
+                <ion-card-subtitle>
+                  <div>{{education.date}}</div>
+                </ion-card-subtitle>
+              </ion-col>
+            </ion-row>
+            <br>
+            <ion-row>
+              <ion-card-subtitle>{{education.role}}
+              </ion-card-subtitle>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </div>
+    </ion-card>
+    <br>
+  </div>
 </ion-content>

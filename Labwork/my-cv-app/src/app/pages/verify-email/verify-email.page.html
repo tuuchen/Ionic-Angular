@@ -10,23 +10,25 @@
 </ion-header>
 
 <ion-content>
-  <br>
-  <br>
-  <ion-card>
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-card-title>
-            Please check your email and click on the link to verfiy your email
-            address.
-          </ion-card-title>
-        </ion-row>
-      </ion-grid>
-      <ion-button color="tertiary" type="submit" (click)="authService.SendVerificationMail()" expand="block">
-        Resend Verification Email
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
+  <div style="margin: 0 auto; max-width: 40rem;">
+    <br>
+    <br>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-card-title>
+              Please check your email and click on the link to verfiy your email
+              address.
+            </ion-card-title>
+          </ion-row>
+        </ion-grid>
+        <ion-button color="tertiary" type="submit" (click)="authService.SendVerificationMail()" expand="block">
+          Resend Verification Email
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
