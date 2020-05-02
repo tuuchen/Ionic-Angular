@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
@@ -10,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use(function (req, res, next) {
-    res.cookie('API_URL', process.env.API_URL || 'http://127.0.0.1:8500/api/');
+    res.cookie('API_KEY', process.env.API_KEY || 'INSERT_API_KEY');
     next();
 });
 
@@ -22,6 +23,11 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.static('www'));
+
+app.get(/.*/, function (req, res) {
+    res.sendFile(path.resolve(__dirname, 'www', 'index.html'));
+});
+
 app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
