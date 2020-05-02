@@ -32,7 +32,7 @@ export class AppComponent {
         this.router.navigate(['menu', 'home']);
         // If not, route to login page
       } else {
-        this.router.navigate(['login']);
+        this.router.navigate(['verify-email']);
       }
     });
   }
