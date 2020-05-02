@@ -2,7 +2,7 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title>Introduction</ion-title>
+    <ion-title>About</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
@@ -14,39 +14,38 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <ion-card class="welcome-card">
-    <img class="profile-image" src="/assets/Tuukka.jpg" alt="" />
-    <ion-card-header>
-      <ion-card-subtitle class="center-text">© Tuukka Tihekari</ion-card-subtitle>
-      <br>
-      <ion-card-title>About me</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>
-        I'm a passionate web developer student at Laurea, and I'm always looking for
-        interesting projects!
-      </p>
-      <br>
-      <p>
-        I started my job career in health technology industry working as an industrial tester, but my curiousity to
-        build awesome things with code sparked my interest to study a degree in Information Technology.
-      </p>
-      <br>
-      <p>
-        My dream job would be a full stack developer, and I'm really interested
-        in UI/UX, and mobile app developement.
-      </p>
-      <br>
-      <p>
-        If you like the App, please sign in and leave a comment in my guestbook!
-      </p>
-      <br>
-      <p>
-        Contact me and let's collaborate.
-        <span>😊</span>
-      </p>
-    </ion-card-content>
+  <ion-card class="card">
+    <ion-row>
+      <ion-col>
+        <ion-card-header>
+          <ion-card-title class="name">Introduction</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>I'm a passionate web developer student at Laurea, and I'm always looking for interesting
+            projects!</p>
+        </ion-card-content>
+      </ion-col>
+      <ion-col style="text-align: center;">
+        <img class="profile-image" width="100px" src="/assets/Tuukka.jpg" /><br /><strong>Tuukka Tihekari</strong>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-card-content>
+        <p>I started my job career in health technology industry working as an industrial tester, but
+          my curiousity to
+          build awesome things with code sparked my interest to study a degree in Information Technology.</p>
+        <p class="mt-2">My dream job would be a full stack developer, and I'm really interested
+          in UI/UX, and mobile app developement.</p>
+        <p class="mt-2">If you like the App, please sign in and leave a comment in my guestbook!</p>
+        <p>Contact me and let's collaborate.
+          <span>😊</span></p>
+      </ion-card-content>
+    </ion-row>
   </ion-card>
+
+
+
+
 </ion-content>
 <ion-footer>
   <ion-toolbar>
