@@ -32,6 +32,15 @@ ion-content ion-toolbar {
   --background: translucent;
 }
 
+ion-content {
+  --background: none;
+  background-image: linear-gradient(var(--ion-color-dark), white);
+ /* background-image: linear-gradient(black, white); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .profile-image {
   margin-top: 1rem;
   margin-bottom: 1rem;

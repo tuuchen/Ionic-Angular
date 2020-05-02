@@ -1,7 +1,7 @@
 <!-- Tuukka Tihekari 1800576 01.05.2020 -->
 
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-button (click)="goBack()">
         <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
@@ -16,8 +16,12 @@
     </ion-row>
   </ion-grid>
   <div id="container">
-    <h1>✔️</h1>
-    <strong>You are currently logged in!</strong>
+    <ion-card>
+      <ion-card-content>
+        <h1>✔️</h1>
+        <strong>You are currently logged in!</strong>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
 <ion-footer>

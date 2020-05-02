@@ -3,6 +3,14 @@
 ion-content ion-toolbar {
     --background: translucent;
   }
+
+  ion-content {
+    --background: none;
+    background-image: linear-gradient(var(--ion-color-dark), white);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
   #container {
     text-align: center;
