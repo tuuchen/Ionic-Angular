@@ -1,11 +1,12 @@
-/* Tuukka Tihekari 1800576, 01.05.2020 */
+/* Tuukka Tihekari & Essi Marjoniemi 19/04/2020 */ 
 
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthenticationService } from './services/authentication.service';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router } from '@angular/router';
+import { WeatherService } from './services/weather.service';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,9 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private authenticationService: AuthenticationService,
-    private router: Router
+    private router: Router,
+    private weatherService: WeatherService,
+    private dataService: DataService
   ) {
     this.initializeApp();
   }
@@ -27,13 +29,17 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      // If user is logged, route to home page
-      if (this.authenticationService.isLoggedIn) {
-        this.router.navigate(['menu', 'home']);
-        // If not, route to login page
-      } else {
-        this.router.navigate(['home']);
-      }
+      this.router.navigate(['']);
+
+      this.weatherService
+        .getLocation()
+        .then((coords) => {
+          this.weatherService.weatherFromCoords(coords);
+        })
+        .catch((err) => {
+          console.log(err);
+          this.weatherService.weatherFromStorage();
+        });
     });
   }
 }

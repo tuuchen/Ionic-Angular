@@ -1,56 +1,25 @@
-<!-- Tuukka Tihekari 1800576 01.05.2020 -->
-
+<!-- Home page with side menu items -->
 <ion-header>
-  <ion-toolbar color="dark">
-    <ion-title>About</ion-title>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button routerLink="/menu/dashboard" routerDirection="forward">
-        <ion-icon name="build-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
-  <ion-card class="card">
-    <ion-row>
-      <ion-col>
-        <ion-card-header>
-          <ion-card-title class="name">Introduction</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>I'm a BIT student at Laurea and I'm passionate about web development.</p>
-        </ion-card-content>
-      </ion-col>
-      <ion-col style="text-align: center;">
-        <img class="profile-image" width="100px" src="/assets/Tuukka.jpg" /><br /><strong>Tuukka Tihekari</strong>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-card-content>
-        <p>I started my career in health tech industry working as an tester, but
-          my curiousity about how to
-          build awesome things with code sparked my interest to study a degree in information technology.</p>
-        <p class="mt-2">I'm really interested
-          about UI design, UX and especially hybrid mobile app development!</p>
-        <p class="mt-2">If you like the App, please sign in and leave a comment in my guestbook!</p>
-        <p class="mt-3">Contact me and let's collaborate.
-          <span>😊</span></p>
-      </ion-card-content>
-    </ion-row>
-  </ion-card>
-
-
-
-
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>
+      Start with Ionic
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ion icframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
+  </div>
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <ion-menu-toggle>
-      <ion-button color="dark" expand="block">My Skills
-      </ion-button>
-    </ion-menu-toggle>
-  </ion-toolbar>
-</ion-footer>

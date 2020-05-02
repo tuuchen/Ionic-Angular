@@ -1,10 +1,12 @@
-/* Tuukka Tihekari 1800576, 01.05.2020 */
+/* Tuukka Tihekari & Essi Marjoniemi 19/04/2020 */ 
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
+
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {

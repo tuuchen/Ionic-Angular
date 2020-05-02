@@ -1,8 +1,10 @@
-/* Tuukka Tihekari 1800576 01.05.2020 */
-
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
-
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { WeatherService } from '../../services/weather.service';
+import { MenuController } from '@ionic/angular';
+import { ActionSheetController } from '@ionic/angular';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,53 +12,120 @@ import { Router, RouterEvent } from '@angular/router';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  activePath = '';
-
-  // Creating the array of the pages, define page names and path inside
-  pages = [
+  public weatherForm = new FormGroup({
+    city: new FormControl('', Validators.required),
+  });
+  public activePath = '';
+  public location: any[];
+  public locatedTime: any;
+  public pages = [
     {
-      name: 'Technical Skills',
-      path: '/menu/technical-skills',
+      name: 'Home',
+      path: '/menu/home',
     },
     {
-      name: 'Soft Skills',
-      path: '/menu/soft-skills',
-    },
-    {
-      name: 'Personal Projects',
-      path: '/menu/personal-projects',
-    },
-    {
-      name: 'Team Projects',
-      path: '/menu/team-projects',
+      name: 'Contact',
+      path: '/menu/contact',
     },
   ];
 
-    // Array of details
-  details = [
-    {
-      url: 'https://github.com/tuuchen',
-    },
+  public cities = [
+    'Helsinki',
+    'Tampere',
+    'Joensuu',
+    'Vaasa',
+    'Keminmaa',
+    'Rovaniemi',
   ];
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private weatherService: WeatherService,
+    private menu: MenuController,
+    public actionSheetController: ActionSheetController,
+    private dataService: DataService
+  ) {
     this.router.events.subscribe((event: RouterEvent) => {
       this.activePath = event.url;
     });
   }
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Last located at ' + this.locatedTime,
+      subHeader: 'Coords:',
+      buttons: [
+        {
+          text: 'LAT: ' + this.location[0],
+          handler: () => {
+            console.log('LAT clicked!');
+          },
+        },
+        {
+          text: 'LON: ' + this.location[1],
+          handler: () => {
+            console.log('Lon clicked!');
+          },
+        },
+        {
+          text: 'Cancel',
+          icon: 'close',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          },
+        },
+      ],
+    });
+    await actionSheet.present();
+  }
 
-   // Open and send email
-  sendEmail() {
+  search(data: any) {
+    this.weatherService.weatherFromCity(data.city);
+  }
+
+  searchRecent(data: any) {
+    this.weatherService.weatherFromCity(data);
+  }
+
+  locate() {
+    this.weatherService.getLocation().then((data) => {
+      this.weatherService.weatherFromCoords(data);
+    });
+  }
+
+  sendFeedback() {
     window.open(
-      'mailto:tuukka.tihekari@student.laurea.fi' +
-        "?subject=I'm contacting you from your CV app"
+      'mailto:tuukka.tihekari@student.laurea.fi, essi.marjoniemi@student.laurea.fi' +
+        '?subject=Feedback about your WeatherApp'
     );
   }
 
-  // Redirect to URL
-  doRedirect(url) {
-    window.open(url);
+  getDate() {
+    const today = new Date();
+    const date =
+      today.getDate() +
+      '.' +
+      (today.getMonth() + 1) +
+      '.' +
+      today.getFullYear();
+    const time =
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    return date + ' ' + time;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dataService.getLastLocation().subscribe((data) => {
+      this.locatedTime = this.getDate();
+      this.location = data;
+    });
+
+    this.dataService.getCityName().subscribe((res) => {
+      this.cities.unshift(res);
+      this.cities = [...new Set(this.cities)];
+      if (this.cities.length > 6) {
+        this.cities.splice(-1, 1);
+      }
+      this.menu.close();
+    });
+  }
 }
