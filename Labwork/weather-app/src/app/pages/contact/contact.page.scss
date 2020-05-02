@@ -1,0 +1,25 @@
+/* Tuukka Tihekari 1800576 01.05.2020 */
+
+.profile-image {
+    width: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    display: block;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.icon {
+    position: relative;
+    left: 10%;
+    display: block;
+}

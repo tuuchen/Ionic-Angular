@@ -1,0 +1,41 @@
+/* Tuukka Tihekari 1800576 01.05.2020 */
+
+#container {
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #8c8c8c;
+
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+ion-content ion-toolbar {
+    --background: translucent;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+ion-content {
+    --background: none;
+    background-image: linear-gradient(var(--ion-color-dark), white);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

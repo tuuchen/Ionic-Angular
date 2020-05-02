@@ -1,0 +1,55 @@
+<!-- Tuukka Tihekari 1800576 01.05.2020 -->
+
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <form>
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" #email required></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" #password required></ion-input>
+      </ion-item>
+    </form>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" (click)="authService.GoogleAuth()" expand="block">
+          Login with Google
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="secondary" routerLink="/menu/home" routerDirection="forward">Skip</ion-button>
+      </ion-col>
+    </ion-row>
+    <div id="container">
+      <br />
+      <strong>Login to enable all features!</strong>
+      <div class="list">
+        <p>View guestbook <span>✔️</span>
+        </p>
+        <p>Add messages to guestbook <span>✔️</span>
+        </p>
+        <br>
+        <br>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="dark" expand="block" routerLink="/register" routerDirection="forward">Register</ion-button>
+  </ion-toolbar>
+</ion-footer>

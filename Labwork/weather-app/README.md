@@ -1,10 +1,6 @@
-# Mobile Weather App
+# My CV App
 
-This Mobile App is based on Wireframe found [here.](https://github.com/tuuchen/ionic-angular/tree/master/Labwork/Wireframe)
-
-Live demo of this project can be found [here.](https://ionic-weatherdemo.herokuapp.com/)
-
-![WeatherApp](https://raw.githubusercontent.com/tuuchen/ionic-angular/master/Labwork/WeatherApp/src/assets/App.png)
+Live demo of this project can be found [here.](https://ionic-cv-app.herokuapp.com/)
 
 ## Project setup
 
@@ -41,5 +37,3 @@ npm run lint
 ### Customize configuration
 
 See [Configuration Reference](https://ionicframework.com/docs/cli/configuration).
-
-_Design and code: Tuukka Tihekari & Essi Marjoniemi_

@@ -1,0 +1,34 @@
+<!-- Tuukka Tihekari 1800576 01.05.2020 -->
+
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Soft Skills</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/menu/dashboard" routerDirection="forward">
+        <ion-icon name="build-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="text-center">
+  <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <!-- Loop skills here -->
+            <ion-list *ngFor="let skill of softSkills">
+              <ion-item>
+                <h3>✔️</h3>
+                <ion-card-subtitle class="ml-3">
+                  {{skill.description}}
+                </ion-card-subtitle>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+</ion-content>
