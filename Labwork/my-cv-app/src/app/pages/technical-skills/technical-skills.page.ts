@@ -37,7 +37,7 @@ export class TechnicalSkillsPage implements OnInit {
       value: 3,
     },
     {
-      name: 'ES',
+      name: 'JavaScript',
       value: 4,
     },
     {
