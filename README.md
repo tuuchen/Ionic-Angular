@@ -11,5 +11,4 @@ These are my Ionic-Angular mobile app prototypes for Laurea course R0334-3003 In
 | 03     |        [Firebase Login](Labwork/firebase-login)        |    Mobile App login with Firebase     | [Link](https://ionic-angular-demo.herokuapp.com/)     |
 | 04     |            [Lyrics App](Labwork/lyrics-app)            |        CRUD app with Firebase         | [Link](https://labwork7.herokuapp.com/)               |
 | 05     |           [Weather App](Labwork/weather-app)           | Mobile Weather App with weather radar | [Link](https://ionic-weatherdemo.herokuapp.com/)      |
-| 06     |    [CV App Wireframe](Labwork/my-cv-app-wireframe)     |      My Mobile CV App Wireframe       | [Link](https://creator.ionic.io/share/cb30bb0bfac2) |
-| 07     |              [CV App](Labwork/my-cv-app)               |           My Mobile CV App            | [Link](https://ionic-cv-app.herokuapp.com/)         |
+| 06     |              [CV App](Labwork/my-cv-app)               |           My Mobile CV App            | [Link](https://ionic-cv-app.herokuapp.com/)         |
